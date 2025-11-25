@@ -33,10 +33,14 @@ function render(variables = {}) {
     document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name} ${variables.lastName}</h1>
-          <h2>${variables.role}</h2>
-          <h3>${variables.city} ${variables.country}</h3>
-          <ul class="position-right">
+          <h1>${variables.name ? variables.name : "Nacho"} ${
+      variables.lastName ? variables.lastName : "Vela"
+    }</h1>
+          <h2>${variables.role ? variables.role : "miss Universo"}</h2>
+          <h3>${variables.city ? variables.city : "Narnia"} ${
+      variables.country ? variables.country : "Multiverso"
+    }</h3>
+          <ul class=${variables.socialMediaPosition}>
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
             <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
